@@ -48,14 +48,14 @@ img.bioImage{
 }
 
 img.charts{
-    width:60%;
+    width:80%;
     margin:auto;
     display:block;
 }
 
 p.bioText{
     font-weight: 300;
-    font-size: 1.00em;
+    font-size: 1.05em;
     line-height: 120%;
 }
 

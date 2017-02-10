@@ -1,5 +1,5 @@
 body{
-    font-family: 'Roboto Condensed', helvetica, sans-serif;
+    font-family: 'Ubuntu Condensed', helvetica, sans-serif;
 }
 
 div.title{
@@ -48,7 +48,7 @@ img.bioImage{
 }
 
 img.charts{
-    width:40%;
+    width:60%;
     margin:auto;
     display:block;
 }

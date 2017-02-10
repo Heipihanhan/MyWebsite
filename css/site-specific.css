@@ -13,15 +13,16 @@ h1{
     font-size: 2em;
     max-width: 800px;
     text-align: center;
-    margin: 25px, 25px;
+    margin: 20px, 20px;
     margin-right: auto;
     margin-left: auto;
     margin-bottom: auto;
 }
 
 h2{
+    font-size: 1.25em
     text-align: center;
-    margin: 20px, 20px;
+    margin: 15px, 15px;
 }
 
 h3{

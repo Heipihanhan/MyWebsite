@@ -47,8 +47,13 @@ img.bioImage{
     margin: auto;
     display: block;
 }
+img.chart1{
+    width: 60%;
+    margin: auto;
+    display: block;
+}
 
-img.charts{
+img.chart2{
     width:80%;
     margin:auto;
     display:block;

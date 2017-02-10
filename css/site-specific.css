@@ -64,7 +64,7 @@ p.bioText > a{
 }
 
 p.bioText > a:hover{
-    background-color: #FFFF00; 
+    background-color: #f0f0f0; 
 }
 
 div.linkList{
@@ -85,5 +85,5 @@ li.assignmentLink > a{
 }
 
 li.assignmentLink > a:hover{
-    background-color: #FFFF00; 
+    background-color: #f0f0f0; 
 }

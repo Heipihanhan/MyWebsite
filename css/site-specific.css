@@ -10,7 +10,7 @@ div.title{
 h1{
     color: #000000;
     font-weight: 400;
-    font-size: 1.8em;
+    font-size: 1.75em;
     max-width: 800px;
     text-align: center;
     margin: auto;
@@ -44,7 +44,7 @@ div.bio{
 }
 
 img.bioImage{
-    width: 30%;
+    width: 25%;
     margin: auto;
     display: block;
 }

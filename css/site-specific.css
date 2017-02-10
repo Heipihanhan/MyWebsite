@@ -42,13 +42,13 @@ div.bio{
 }
 
 img.bioImage{
-    width: 25%;
+    width: 30%;
     margin: auto;
     display: block;
 }
 
 img.charts{
-    width:100%;
+    width:80%;
     margin:auto;
     display:block;
 }

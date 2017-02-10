@@ -10,7 +10,7 @@ div.title{
 h1{
   color: #000000;
     font-weight: 400;
-    font-size: 2em;
+    font-size: 1.8em;
     max-width: 800px;
     text-align: center;
     margin: 20px, 20px;
@@ -20,8 +20,8 @@ h1{
 }
 
 h2{
-    font-size: 1.25em
-    text-align: center;
+    font-size: 1.25em;
+    text-align : center;
     margin: 15px, 15px;
 }
 

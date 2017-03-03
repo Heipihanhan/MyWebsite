@@ -1,9 +1,9 @@
-var refugeeTable; 
+var victimTable; 
 var maxLength = 750; 
 var maxValue = 0;
 
 function preload(){
-	refugeeTable = loadTable('../data/RefugeesUNHCR.csv', 'csv', 'header');
+	refugeeTable = loadTable('../data/03_Assignment_3_Data', 'xlsx', 'header');
 	
 }
 

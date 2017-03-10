@@ -1,115 +1,151 @@
-// var myFirstVariable = 20;
-// var secondVariable = 35;
-// var myName = "Hanhan";  // you can use single quote or double quote, or quote inside quote like "'Hanhan'"
-// var amIamerican = false;
-// var numbers = [12, 214, 523, 645, 86];
-// var myObject = {name: "Hanhan", lastname: "Li", age: 25, Chinese: true};
-
-// var cricleSize = 50;
-
-// function myFirstFunction (x1, x2, x3){
-// 	//var x5 = "mistery values ..."; // it won't work as a local function ?
-// 	var x4 = x1 * x2 * x3;
-// 	return x4;
-// }
-
-// // load the data. preload force the javascript to run the data first 
-
-// //function preload(){}
-
-// // setup function always run at the begining 
-
-// function setup(){
-// 	createCanvas(1000, 1000);
-// 	//for (var i = 0; i < 100; i++){ //i++ could be written as i = i + 1 
-// 	//	print(i);
-
-// 	var i = 0;
-// 	while (i < 100){
-// 		print(i);
-// 		i++;
-	
-// 	}
-
-
-// 	//console.log(myFirstVariable);  //console is a great way of trouble shooting
-//     var thirdVariable = myFirstVariable + secondVariable + myName;  //javascript deal with it by the order, at first numbers, then texts
-//     print(thirdVariable);
-
-//     var fourthVariable = myName + myFirstVariable + secondVariable;  //javascript treats it as texts first and the rest follow suit. 
-//     print(fourthVariable);
-//     print(amIamerican);
-//     print(numbers[0]);
-//     print(myObject["name"]);   // ["name"] or ['name'] both works
-//     print(myFirstFunction(2, 4, 5));
-
-
-// } 
-
-
-
-// function draw(){
-// 	// background(0, 100, 100);
-// 	if (mouseIsPressed){
-// 		fill(255);
-// 	} else {
-// 		fill(0);
-// 	}
-
-// 	stroke(200, 0, 50);
-// 	strokeWeight(1);
-// 	ellipse(mouseX, mouseY, cricleSize, cricleSize);
-
-
-// }
-
 // ***** Global variables ***** //
-//var myData = [12, 43, 15, 25, 34];  
-//var labels = ['Colombia', 'Peru', 'Venezuela', 'Chile', 'Argentina'];
+var refugeeTable;
+var topRefugeesTable = new p5.Table;
+var maxTotal = 0;
+var maxLabel = 45;
+var maxLength = 500;
+var headers = ['Country','Refugees','Asylum-seekers','Returned refugees','IDPs','Returned IDPs','Stateless','Others of concern','Total']
+var startChartY = 100;
+var selectedButton = 0;
+var buttonLabels = ['Total', 'Refugees', 'IDPs'];
 
-// build the data table outside the preload function so that is globally accessible to every function that follows
-var refugeeTable; 
-var maxLength = 750; 
-var maxValue = 0;
-
+// ***** Preload function ***** //
 function preload(){
-	refugeeTable = loadTable('../data/RefugeesUNHCR.csv', 'csv', 'header');
-	
+    refugeeTable = loadTable('../data/RefugeesUNHCR.csv', 'csv', 'header');
+    console.log('Done loading table...');
 }
 
 // ***** Setup function ***** //
 function setup(){
-  createCanvas(1000, 2000);
-  textAlign(RIGHT, TOP);
-  print(refugeeTable.getRowCount());
-  print(refugeeTable.getColumnCount());
-  for (var i = 0; i < refugeeTable.getRowCount(); i++){
-  	maxValue = max(maxValue, refugeeTable.getNum(i, 'Total'));
-  }
-  print(maxValue);
+    createCanvas(1000, 3000);
+    textSize(12);
+    console.log('Setup complete...');
+    print(refugeeTable.getRowCount() + ' rows loaded...');
+    print(refugeeTable.getColumnCount() + ' columns loaded...');
+    for (var i = 0; i < refugeeTable.getRowCount(); i++){
+      maxTotal = max(refugeeTable.getNum(i, 'Total'), maxTotal);
+      maxLabel = max(refugeeTable.getString(i, 'Country').length, maxLabel);
+    }
+    print('Maximum')
 
+    }
+    
+    createNewTable();
+}
+// ****** Create new table function ******** //
+function createNewTable(){
+    //toprefugeeCountries.addColumn('Country');
+    //toprefugeeCountries.addColumn('Total');
+    var minimumRefugees = 100000;
+    for (var i = 0; i < headers.length; i++) {
+        topRefugeesTable.addColumn(headers[i]);
+    }
+    for (var i = 0; i < refugeeTable.getRowCount(); i++) {
+        var totalRefugees = refugeeTable.getNum(i, 'Total');
+        if (totalRefugees >= 100000) {
+            var newRow = topRefugeesTable.addRow()
+            for (var j = 0; j < headers.length; j++) {
+                newRow.setString(headers[i], refugeeTable.getString(i, headers[i]));
+            }
+        }
+    }
+    print('New top refugee table created...');
+}
+
+// ****** Draw chart function *************//
+function drawCountries(category){
+    fill(0);
+    noStroke();
+    textAlign(LEFT, TOP);
+    textSize(12);
+    for (var i = 0; i < topRefugeesTable.getRowCount(); i++) {
+        maxTotal = max(topRefugeesTable.getNum(i, category), maxTotal);
+    }
+    for (var i = 0; i < topRefugeesTable.getRowCount(); i++) {
+        var total = topRefugeesTable.getNum(i, category);
+        var length = map(total, 0, maxTotal, 0, maxLength);
+        rect(maxLabel * 5, startChartY + 2 + 14*i, length, 12)
+        text(nfc(total, 0), maxLabel * 5 + length + 5, startChartY + 14*i);
+    }
+    textAlign(RIGHT, TOP);
+    for (var i = 0; i < topRefugeesTable.getRowCount(); i++) {
+        text(topRefugeesTable.getString(i, 'Country'), maxLabel * 5 - 5, startChartY + 14*i);
+    }
+}
+
+// ****** Draw Buttons Function ********* //
+function drawButtons(){
+    textAlign(CENTER);
+    textSize(12);
+    for (var i = 0; i < 3; i++) {
+        if (selectedButton == i){
+            fill(255, 100, 100);
+        }
+        else {
+            fill(0);
+        }
+        rect(50 + i * 60, 10, 50, 20);
+        fill(0);
+        text(buttonLabels[i], 75 + i * 60, 30);
+    }
+}
+
+// ***** Draw Country Details Function ****** //
+function drawCountryDetails(xPos, yPos){
+    textAlign(LEFT, TOP);
+    if (yPos > 105 && yPos < 885){
+        var selectedCountry = floor((yPos - 105) / 14);
+        textSize(24);
+        text(topRefugeesTable.getString(selectedCountry, 'Country'), 800, 105);
+        textSize(12);
+        text('Refugees: ' + nfc(topRefugeesTable.getNum(selectedCountry, 'Refugees'), 0), 800, 135);
+        text('IDPs: ' + nfc(topRefugeesTable.getNum(selectedCountry, 'IDPs'), 0), 800, 150);
+        text('Stateless: ' + nfc(topRefugeesTable.getNum(selectedCountry, 'Stateless'), 0), 800, 165);
+        text('Total: ' + nfc(topRefugeesTable.getNum(selectedCountry, 'Total'), 0), 800, 180);
+    }
 }
 
 // ***** Draw function ***** //
 function draw(){
-	background(255);
-	for (var i = 0; i < refugeeTable.getRowCount(); i++){
-		var rectLength = map(refugeeTable.getNum(i, 'Total'), 0, maxValue, 0, maxLength); //map(value, min, max, min, max) convert scale, super useful 
-		rect(100, 50 + 20 * i, rectLength, 15);
-	}
+    background(255);
+    drawCountries(buttonLabels[selectedButton]);
+    drawButtons();
+    textAlign(RIGHT, BOTTOM);
+    text(round(mouseX) + ', ' + round(mouseY), mouseX, mouseY);
+    drawCountryDetails(mouseX, mouseY);
+    mousePosition();
 }
 
-// function draw(){
-//   background(255);
-//   fill(0);
-//   noStroke();
-//   // Drawing the bar chart
-//   for (var i = 0; i < refugeeTable.length; i++) {
-//     rect(90, 50 + 25 * i, refugeeTable[i] * 15, 20);
-//     text(refugeeTable[i], (90 + refugeeTable[i] * 15 + 20), 50 + 25 * i)
-//   }
-  // Drawing the labels
-  // for (var i = 0; i < labels.length; i++) {
-  //   text(labels[i], 90, 50 + 25 * i);
-  // }
+// ***** MousePressed Function ******* //
+function mousePressed(){
+    if (mouseX > 50 && mouseX < 100 && mouseY > 10 && mouseY < 30){
+        selectedButton = 0;
+        maxTotal = 0;
+    }
+    if (mouseX > 110 && mouseX < 160 && mouseY > 10 && mouseY < 30){
+        selectedButton = 1;
+        maxTotal = 0;
+    }
+    if (mouseX > 170 && mouseX < 220 && mouseY > 10 && mouseY < 30){
+        selectedButton = 2;
+        maxTotal = 0;
+    }
+}
+
+// ***** Mouse Position Function ********* //
+function mousePosition(){
+    if (mouseX > 50 && mouseX < 100 && mouseY > 10 && mouseY < 30){
+        cursor(HAND);
+    }
+    else if (mouseX > 110 && mouseX < 160 && mouseY > 10 && mouseY < 30){
+        cursor(HAND);
+    }
+    else if (mouseX > 170 && mouseX < 220 && mouseY > 10 && mouseY < 30){
+        cursor(HAND);
+    }
+    else{
+        cursor(ARROW);
+    }
+}
+
 

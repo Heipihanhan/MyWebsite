@@ -36,6 +36,18 @@ h3{
     margin-bottom: auto;
 }
 
+h4{
+    font-size: 1.25em;
+    font-weight: 400;
+    max-width: 800px;
+    text-align: left;
+    margin-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+
+}
+
 div.bio{
     max-width: 800px;
     margin-top: 20px;

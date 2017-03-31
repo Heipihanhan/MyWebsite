@@ -2,19 +2,24 @@
 
 var apiKey = 'c42764416e57102a80ebfba7dbf84ede';
 var baseURL = 'http://api.openweathermap.org/data/2.5/weather?q=';
-var city = 'Fairbanks';
+var city = 'New York';
 var units = 'metric';
 var weatherData;
 var temperature;
 var humidity;
 var button;
+var wind;
+var cloud;
+var visibility;
+var precipitation;
+var lastupdate;
 
 
 
 // ***** Setup function ***** //
 
 function setup(){
-	createCanvas(800, 800);
+	createCanvas(800, 600);
 	button = select('#submit');
 	city = select('#city');
 	button.mousePressed(queryAPI);
@@ -38,11 +43,13 @@ function getWeatherData(apiData){
 
 // ***** Draw function ***** // 
 function draw(){
-	background(255);
-	fill(0);
+	background(80, 150, 160);
+	fill(255, 255, 255);
 	noStroke();
 	if (weatherData){ // if weatherData = True or weatherData = False. this is a "true or false" if statement. 
-	    ellipse(200, 200, temperature * 10, temperature * 10);
+	    ellipse(100, 100, temperature * 10, temperature * 10);
+	    ellipse(200, 200, precipitation * 10, precipitation * 10);
+
 	}
 	
 }

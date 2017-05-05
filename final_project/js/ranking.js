@@ -23,14 +23,14 @@ function draw() {
     text('Lebanon', 1000, 30, 200, 200);
     text('2014 - 2015', 1000, 60, 200, 200);
     text('20048 total intensity ', 1000, 100, 200, 200);
-    textSize(5);
+    textSize(20);
     }
 
 	if (mouseX > 800 && mouseX < 950 && mouseY > 100 && mouseY < 200){
 	text('Lebanon', 1000, 30, 200, 200);
 	text('2014 - 2015', 1000, 60, 200, 200);
-    text('2,210,616 refugees and asylum seekers', 1000, 100, 200, 200);
-    textSize(5);
+    text('2,200,616 refugees and asylum seekers', 1000, 100, 200, 200);
+    textSize(20);
     }
 
 // 2. Jordan
@@ -38,14 +38,14 @@ function draw() {
     text('Jordan', 1000, 30, 200, 200);
     text('2014 - 2015', 1000, 60, 200, 200);
     text('19155 total intensity ', 1000, 100, 200, 200);
-    textSize(5);
+    textSize(20);
     }
 
 	if (mouseX > 800 && mouseX < 950 && mouseY > 200 && mouseY < 300){
 	text('Jordan', 1000, 30, 200, 200);
     text('2014 - 2015', 1000, 60, 200, 200);
-    text('1,251,335 million refugees and asylum seekers', 1000, 100, 200, 250);
-    textSize(5);
+    text('1,201,335 refugees and asylum seekers', 1000, 100, 200, 200);
+    textSize(20);
     }
 
 // 3. Turkey
@@ -53,14 +53,14 @@ function draw() {
     text('Turkey', 1000, 30, 200, 200);
     text('2014 - 2015', 1000, 60, 200, 200);
     text('16209 total intensity ', 1000, 100, 200, 200);
-    textSize(5);
+    textSize(20);
     }
 
 	if (mouseX > 800 && mouseX < 950 && mouseY > 300 && mouseY < 400){
 	text('Turkey', 1000, 30, 200, 200);
     text('2014 - 2015', 1000, 60, 200, 200);
     text('4,061,995 refugees and asylum seekers', 1000, 100, 200, 200);
-    textSize(5);
+    textSize(20);
     }
 
 // 4. Iraq
@@ -68,14 +68,14 @@ function draw() {
     text('Iraq', 1000, 30, 200, 200);
     text('2014 - 2015', 1000, 60, 200, 200);
     text('15317 total intensity ', 1000, 100, 200, 200);
-    textSize(5);
+    textSize(20);
     }
 
 	if (mouseX > 800 && mouseX < 950 && mouseY > 400 && mouseY < 500){
 	text('Iraq', 1000, 30, 200, 200);
     text('2014 - 2015', 1000, 60, 200, 200);
     text('480,063 refugees and asylum seekers', 1000, 100, 200, 200);
-    textSize(5);
+    textSize(20);
     }
 
 // 5. Israel
@@ -83,14 +83,14 @@ function draw() {
     text('Israel', 1000, 30, 200, 200);
     text('2014 - 2015', 1000, 60, 200, 200);
     text('8030 total intensity ', 1000, 100, 200, 200);
-    textSize(5);
+    textSize(20);
     }
 
 	if (mouseX > 800 && mouseX < 950 && mouseY > 500 && mouseY < 600){
 	text('Israel', 1000, 30, 200, 200);
     text('2014 - 2015', 1000, 60, 200, 200);
     text('0 refugees and asylum seekers', 1000, 100, 200, 200);
-    textSize(5);
+    textSize(20);
     }
 
 // 6. U.K.
@@ -98,14 +98,14 @@ function draw() {
     text('U.K.', 1000, 30, 200, 200);
     text('2014 - 2015', 1000, 60, 200, 200);
     text('7146 total intensity ', 1000, 100, 200, 200);
-    textSize(5);
+    textSize(20);
     }
 
 	if (mouseX > 800 && mouseX < 950 && mouseY > 600 && mouseY < 700){
 	text('U.K.', 1000, 30, 200, 200);
     text('2014 - 2015', 1000, 60, 200, 200);
     text('14,046 refugees and asylum seekers', 1000, 100, 200, 200);
-    textSize(5);
+    textSize(20);
     }
 
 // 7. Germany
@@ -113,14 +113,14 @@ function draw() {
     text('Germany', 1000, 30, 200, 200);
     text('2014 - 2015', 1000, 60, 200, 200);
     text('6943 total intensity ', 1000, 100, 200, 200);
-    textSize(5);
+    textSize(20);
     }
 
 	if (mouseX > 800 && mouseX < 950 && mouseY > 700 && mouseY < 800){
     text('Germany', 1000, 30, 200, 200);
     text('2014 - 2015', 1000, 60, 200, 200);
     text('267,771 refugees and asylum seekers', 1000, 100, 200, 200);
-    textSize(5);
+    textSize(20);
     }
 
 // 8. Greece
@@ -128,28 +128,28 @@ function draw() {
     text('Greece', 1000, 30, 200, 200);
     text('2014 - 2015', 1000, 60, 200, 200);
     text('5907 total intensity ',1000, 100, 200, 200);
-    textSize(5);
+    textSize(20);
     }
 
 	if (mouseX > 800 && mouseX < 950 && mouseY > 800 && mouseY < 900){
     text('Greece', 1000, 30, 200, 200);
     text('2014 - 2015', 1000, 60, 200, 200);
     text('13,644 refugees and asylum seekers', 1000, 100, 200, 200);
-    textSize(5);
+    textSize(20);
     }
 // 9. France
     if (mouseX > 600 && mouseX < 750 && mouseY > 900 && mouseY < 1000){
     text('France', 1000, 30, 200, 200);
     text('2014 - 2015', 1000, 60, 200, 200);
     text('5453 total intensity ', 1000, 100, 200, 200);
-    textSize(5);
+    textSize(20);
     }
 
 	if (mouseX > 800 && mouseX < 950 && mouseY > 900 && mouseY < 1000){
     text('France', 1000, 30, 200, 200);
     text('2014 - 2015', 1000, 60, 200, 200);
     text('12,011 refugees and asylum seekers', 1000, 100, 200, 200);
-    textSize(5);
+    textSize(20);
     }
 
 // 10. Egypt
@@ -157,14 +157,14 @@ function draw() {
     text('Egypt', 1000, 30, 200, 200);
     text('2014 - 2015', 1000, 60, 200, 200);
     text('5279 total intensity ', 1000, 100, 200, 200);
-    textSize(5);
+    textSize(20);
     }
 
 	if (mouseX > 800 && mouseX < 950 && mouseY > 1000 && mouseY < 1100){
     text('Egypt', 1000, 30, 200, 200);
     text('2014 - 2015', 1000, 60, 200, 200);
-    text('256,016 refugees and asylum seekers', 1000, 100, 200, 200);
-    textSize(5);
+    text('206,016 refugees and asylum seekers', 1000, 100, 200, 200);
+    textSize(20);
     }
 
  

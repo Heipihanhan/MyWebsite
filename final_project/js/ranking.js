@@ -95,75 +95,75 @@ function draw() {
 
 // 6. U.K.
     if (mouseX > 600 && mouseX < 750 && mouseY > 600 && mouseY < 700){
-    text('U.K.', 1000, 430, 200, 200);
-    text('2014 - 2015', 1000, 460, 200, 200);
-    text('7146 total intensity ', 1000, 500, 200, 200);
+    text('U.K.', 1000, 30, 200, 200);
+    text('2014 - 2015', 1000, 60, 200, 200);
+    text('7146 total intensity ', 1000, 100, 200, 200);
     textSize(5);
     }
 
 	if (mouseX > 800 && mouseX < 950 && mouseY > 600 && mouseY < 700){
-	text('U.K.', 1000, 430, 200, 200);
-    text('2014 - 2015', 1000, 460, 200, 200);
-    text('14,046 refugees and asylum seekers', 1000, 500, 200, 200);
+	text('U.K.', 1000, 30, 200, 200);
+    text('2014 - 2015', 1000, 60, 200, 200);
+    text('14,046 refugees and asylum seekers', 1000, 100, 200, 200);
     textSize(5);
     }
 
 // 7. Germany
     if (mouseX > 600 && mouseX < 750 && mouseY > 700 && mouseY < 800){
-    text('Germany', 1000, 530, 200, 200);
-    text('2014 - 2015', 1000, 570, 200, 200);
-    text('6943 total intensity ', 1000, 600, 200, 200);
+    text('Germany', 1000, 30, 200, 200);
+    text('2014 - 2015', 1000, 60, 200, 200);
+    text('6943 total intensity ', 1000, 100, 200, 200);
     textSize(5);
     }
 
 	if (mouseX > 800 && mouseX < 950 && mouseY > 700 && mouseY < 800){
-    text('Germany', 1000, 530, 200, 200);
-    text('2014 - 2015', 1000, 570, 200, 200);
-    text('267,771 refugees and asylum seekers', 1000, 600, 200, 200);
+    text('Germany', 1000, 30, 200, 200);
+    text('2014 - 2015', 1000, 60, 200, 200);
+    text('267,771 refugees and asylum seekers', 1000, 100, 200, 200);
     textSize(5);
     }
 
 // 8. Greece
     if (mouseX > 600 && mouseX < 750 && mouseY > 800 && mouseY < 900){
-    text('Greece', 1000, 530, 200, 200);
-    text('2014 - 2015', 1000, 570, 200, 200);
-    text('5907 total intensity ',1000, 600, 200, 200);
+    text('Greece', 1000, 30, 200, 200);
+    text('2014 - 2015', 1000, 60, 200, 200);
+    text('5907 total intensity ',1000, 100, 200, 200);
     textSize(5);
     }
 
 	if (mouseX > 800 && mouseX < 950 && mouseY > 800 && mouseY < 900){
-    text('Greece', 1000, 530, 200, 200);
-    text('2014 - 2015', 1000, 570, 200, 200);
-    text('13,644 refugees and asylum seekers', 1000, 600, 200, 200);
+    text('Greece', 1000, 30, 200, 200);
+    text('2014 - 2015', 1000, 60, 200, 200);
+    text('13,644 refugees and asylum seekers', 1000, 100, 200, 200);
     textSize(5);
     }
 // 9. France
     if (mouseX > 600 && mouseX < 750 && mouseY > 900 && mouseY < 1000){
-    text('France', 1000, 530, 200, 200);
-    text('2014 - 2015', 1000, 570, 200, 200);
-    text('5453 total intensity ', 1000, 600, 200, 200);
+    text('France', 1000, 30, 200, 200);
+    text('2014 - 2015', 1000, 60, 200, 200);
+    text('5453 total intensity ', 1000, 100, 200, 200);
     textSize(5);
     }
 
 	if (mouseX > 800 && mouseX < 950 && mouseY > 900 && mouseY < 1000){
-    text('France', 1000, 530, 200, 200);
-    text('2014 - 2015', 1000, 570, 200, 200);
-    text('12,011 refugees and asylum seekers', 1000, 600, 200, 200);
+    text('France', 1000, 30, 200, 200);
+    text('2014 - 2015', 1000, 60, 200, 200);
+    text('12,011 refugees and asylum seekers', 1000, 100, 200, 200);
     textSize(5);
     }
 
 // 10. Egypt
     if (mouseX > 600 && mouseX < 750 && mouseY > 1000 && mouseY < 1100){
-    text('Egypt', 1000, 530, 200, 200);
-    text('2014 - 2015', 1000, 570, 200, 200);
-    text('5279 total intensity ', 1000, 600, 200, 200);
+    text('Egypt', 1000, 30, 200, 200);
+    text('2014 - 2015', 1000, 60, 200, 200);
+    text('5279 total intensity ', 1000, 100, 200, 200);
     textSize(5);
     }
 
 	if (mouseX > 800 && mouseX < 950 && mouseY > 1000 && mouseY < 1100){
-    text('Egypt', 1000, 530, 200, 200);
-    text('2014 - 2015', 1000, 570, 200, 200);
-    text('256,016 refugees and asylum seekers', 1000, 600, 200, 200);
+    text('Egypt', 1000, 30, 200, 200);
+    text('2014 - 2015', 1000, 60, 200, 200);
+    text('256,016 refugees and asylum seekers', 1000, 100, 200, 200);
     textSize(5);
     }
 
